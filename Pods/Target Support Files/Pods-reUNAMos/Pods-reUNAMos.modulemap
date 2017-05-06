@@ -1,0 +1,6 @@
+framework module Pods_reUNAMos {
+  umbrella header "Pods-reUNAMos-umbrella.h"
+
+  export *
+  module * { export * }
+}

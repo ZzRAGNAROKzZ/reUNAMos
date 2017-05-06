@@ -1,0 +1,6 @@
+Class Persona{
+    var username=""
+    var email=""
+    
+
+}
