@@ -282,7 +282,6 @@
                             <constraint firstItem="mAI-SO-OSp" firstAttribute="top" secondItem="e45-6O-T4Z" secondAttribute="bottom" constant="20" id="iMc-Om-Dcu"/>
                             <constraint firstItem="e45-6O-T4Z" firstAttribute="top" secondItem="Wy1-Ld-u03" secondAttribute="bottom" constant="20" id="rhK-gd-PlP"/>
                             <constraint firstItem="Wy1-Ld-u03" firstAttribute="leading" secondItem="OEb-ut-KU6" secondAttribute="leading" id="syo-rf-AtU"/>
-                            <constraint firstItem="e45-6O-T4Z" firstAttribute="trailing" secondItem="OEb-ut-KU6" secondAttribute="trailingMargin" id="tEX-S7-zgj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -704,16 +703,82 @@
                                                 <segue destination="r1S-tk-0fd" kind="presentation" id="D0v-Qv-lw1"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="H0f-O8-bAx">
+                                            <connections>
+                                                <segue destination="v8U-9y-FKr" kind="presentation" id="xEY-2Z-yzz"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-ci-LUf">
+                                <rect key="frame" x="75" y="119" width="224" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-P6-EMw">
+                                <rect key="frame" x="75" y="198" width="224" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzL-rn-qCM">
+                                <rect key="frame" x="82" y="323" width="204" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPw-Wt-PCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679" y="-484"/>
+            <point key="canvasLocation" x="2677.5999999999999" y="-484.40779610194909"/>
+        </scene>
+        <!--Scanner-->
+        <scene sceneID="61c-F9-AOn">
+            <objects>
+                <viewController id="v8U-9y-FKr" customClass="VCQRScanner" customModule="reUNAMos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UGW-dt-qMi"/>
+                        <viewControllerLayoutGuide type="bottom" id="4j0-MZ-gDl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JKR-LZ-WV5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzD-nl-iyu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="QR Scanner" id="C3Q-tO-Wza">
+                                        <barButtonItem key="leftBarButtonItem" title="Regresar" id="saG-9E-N1x">
+                                            <connections>
+                                                <segue destination="QvH-Bp-mPO" kind="presentation" id="rJu-MH-EhG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Finalizar" id="DNI-fN-gPF">
+                                            <connections>
+                                                <segue destination="r1S-tk-0fd" kind="presentation" id="gju-kW-XX5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bzD-nl-iyu" secondAttribute="trailing" id="Nng-kj-TCd"/>
+                            <constraint firstItem="bzD-nl-iyu" firstAttribute="top" secondItem="UGW-dt-qMi" secondAttribute="bottom" constant="8" id="Nxz-Lg-EbT"/>
+                            <constraint firstItem="bzD-nl-iyu" firstAttribute="leading" secondItem="JKR-LZ-WV5" secondAttribute="leading" id="SvB-1w-KSz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iD6-wQ-7I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477.5999999999999" y="-475.41229385307349"/>
         </scene>
     </scenes>
     <resources>
@@ -722,7 +787,8 @@
         <image name="verde1" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gju-kW-XX5"/>
+        <segue reference="rJu-MH-EhG"/>
         <segue reference="GQR-Xc-ZHq"/>
-        <segue reference="D0v-Qv-lw1"/>
     </inferredMetricsTieBreakers>
 </document>

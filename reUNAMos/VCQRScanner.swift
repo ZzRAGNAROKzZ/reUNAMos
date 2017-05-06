@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import SwiftQRCode
 
 class VCQRScanner: UIViewController {
+    
+    
+    let scanner = QRCode()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        scanner.prepareScan(view) { (stringValue) -> () in
+            print(stringValue)
+        }
+        scanner.scanFrame = view.bounds
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         scanner.startScan()
     }
     
 

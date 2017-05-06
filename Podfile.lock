@@ -2,18 +2,21 @@ PODS:
   - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - SwiftQRCode (3.0.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
+  - SwiftQRCode
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  SwiftQRCode: 280589699d84195c2c573011aa52f2c015c31c34
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f84542728c412083498fd8a7aeec9e596d623df6
+PODFILE CHECKSUM: acee8913c1b9e7bef857fa5d2abfda5a6825315e
 
 COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 
@@ -22,10 +23,21 @@ class VCIdentificarUsuario: UIViewController {
             contraseña == tf_contraseña.text {
             performSegue(withIdentifier: "SeguePerfil", sender: self)
         }
+        
+        
+        
+    }
+    //Funcion para esconder teclado
+    func dissmissKey(){
+        view.endEditing(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target:self,action:#selector(VCIdentificarUsuario.dissmissKey))
+        
+        
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }

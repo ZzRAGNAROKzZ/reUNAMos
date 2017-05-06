@@ -29,7 +29,16 @@ class VCRegistrarUsuario: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target:self,action:#selector(VCRegistrarUsuario.dissmissKey))
+        
+        
+        view.addGestureRecognizer(tap)
     }
+    //Funcion para esconder teclado
+    func dissmissKey(){
+        view.endEditing(true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

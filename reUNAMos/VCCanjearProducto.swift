@@ -7,22 +7,44 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import AlamofireImage
 
 class VCCanjearProducto: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var tableview: UITableView!
     
-    let descripcion:[String]=["Boletos de Metro","Boletos de Futbol","Boletos Teatro"]
-    let imagen:[UIImage]=[#imageLiteral(resourceName: "canjeable01"),#imageLiteral(resourceName: "canjeable02"),#imageLiteral(resourceName: "canjeable03")]
-    let dinero:[Int]=[20,30,50]
+    var descripcion:[String]=["","Boletos de Metro","Boletos de Futbol","Boletos Teatro"]
+    var imagen:[UIImage]=[#imageLiteral(resourceName: "canjeable01"),#imageLiteral(resourceName: "canjeable01"),#imageLiteral(resourceName: "canjeable02"),#imageLiteral(resourceName: "canjeable03")]
+    var dinero:[Int]=[0,20,30,50]
+    let url = "http://testhack.localtunnel.me/catalog"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Alamofire.request(url).responseJSON {(response) in
+            if  response.result.value != nil{
+                let jsonOk=JSON(response.result.value)
+                print(jsonOk)
+                //print("Hola")
+                
+                self.descripcion[0] = jsonOk[0]["description"].description
+                
+                self.dinero[0] =  Int(  jsonOk[0]["value"].description)!
+                
+                self.tableview.reloadData()
+                
+            }
+        }
+        
+                
+                
         // Do any additional setup after loading the view.
-        tableview.delegate = self
-        tableview.dataSource = self
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
         self.tableview.reloadData()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +53,7 @@ class VCCanjearProducto: UIViewController,UITableViewDataSource,UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imagen.count
+        return self.imagen.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

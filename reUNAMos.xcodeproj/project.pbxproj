@@ -21,6 +21,7 @@
 		B31202A21EBD62E000AE3B51 /* VCRegistrarProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31202A11EBD62E000AE3B51 /* VCRegistrarProducto.swift */; };
 		B31202A41EBD631100AE3B51 /* VCHistorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31202A31EBD631100AE3B51 /* VCHistorial.swift */; };
 		B31202A61EBD635500AE3B51 /* VCCanjearProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31202A51EBD635500AE3B51 /* VCCanjearProducto.swift */; };
+		B330A4691EBE64150000FF46 /* VCQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330A4681EBE64150000FF46 /* VCQRScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B31202A11EBD62E000AE3B51 /* VCRegistrarProducto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRegistrarProducto.swift; sourceTree = "<group>"; };
 		B31202A31EBD631100AE3B51 /* VCHistorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCHistorial.swift; sourceTree = "<group>"; };
 		B31202A51EBD635500AE3B51 /* VCCanjearProducto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCCanjearProducto.swift; sourceTree = "<group>"; };
+		B330A4681EBE64150000FF46 /* VCQRScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCQRScanner.swift; sourceTree = "<group>"; };
 		BD274BF18681A5B5773270A2 /* Pods-reUNAMos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reUNAMos.release.xcconfig"; path = "Pods/Target Support Files/Pods-reUNAMos/Pods-reUNAMos.release.xcconfig"; sourceTree = "<group>"; };
 		F442C21DE95FE2745DC3B5E8 /* Pods-reUNAMos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reUNAMos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reUNAMos/Pods-reUNAMos.debug.xcconfig"; sourceTree = "<group>"; };
 		FEBD118C88D2D743B1E69461 /* Pods_reUNAMos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reUNAMos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 				B31202A11EBD62E000AE3B51 /* VCRegistrarProducto.swift */,
 				B31202A51EBD635500AE3B51 /* VCCanjearProducto.swift */,
 				B31202A31EBD631100AE3B51 /* VCHistorial.swift */,
+				B330A4681EBE64150000FF46 /* VCQRScanner.swift */,
 				B31202851EBD47E200AE3B51 /* Main.storyboard */,
 				B31202881EBD47E200AE3B51 /* Assets.xcassets */,
 				B312028A1EBD47E200AE3B51 /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 				B31202A41EBD631100AE3B51 /* VCHistorial.swift in Sources */,
 				B31202A21EBD62E000AE3B51 /* VCRegistrarProducto.swift in Sources */,
 				B312029E1EBD628500AE3B51 /* VCIdentificarUsuario.swift in Sources */,
+				B330A4691EBE64150000FF46 /* VCQRScanner.swift in Sources */,
 				B31202981EBD613200AE3B51 /* TableViewCellCanjear.swift in Sources */,
 				B31202841EBD47E200AE3B51 /* ViewController.swift in Sources */,
 				B31202821EBD47E200AE3B51 /* AppDelegate.swift in Sources */,
